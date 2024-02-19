@@ -1,0 +1,12 @@
+[Unit]
+Description=regenerate the MAC address of interface %I
+
+[Timer]
+OnStartupSec=1m
+OnUnitActiveSec=1h
+RandomizedDelaySec=1h
+Unit=rand_mac@%i.service
+Persistent=yes
+
+[Install]
+WantedBy=timers.target
