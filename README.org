@@ -1,0 +1,9 @@
+* rand_mac
+MAC addresses are constant, which makes you easily trackable when you are associated with e.g. a WLAN network.
+
+Enable =rand_mac@wlan0.timer= to regularily change your MAC address when not connected. Works for Ethernet to!
+
+Copy:
+=rand_mac@.timer= -> =/etc/systemd/system=
+=rand_mac@.service= -> =/etc/systemd/system=
+=rand_mac.sh= -> =/usr/local/bin/rand_mac=
